@@ -1,0 +1,7 @@
+{
+  "scenario": "canonical-basic-addition",
+  "command": "add",
+  "operands": [7, 5],
+  "expectedResult": 12,
+  "notes": "This file is intentionally duplicated in multiple paths for canonical RAG ingestion tests."
+}
