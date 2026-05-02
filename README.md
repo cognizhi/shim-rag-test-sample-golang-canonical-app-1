@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository is a small Go CLI used to test canonical document handling in RAG ingestion. The stable `main` branch contains a working calculator app with arithmetic, named constants, and length conversion commands.
+This repository is a small Go CLI used to test canonical document handling in RAG ingestion. This branch removes the named constants feature and keeps the arithmetic and length conversion commands.
 
 The repository intentionally keeps some byte-for-byte identical files in different paths. Those files represent the same canonical content appearing under different app, component, and test-data locations.
 
@@ -37,7 +37,6 @@ go run ./cmd/canonicalcalc convert-length 1200 meter kilometer
 | `sub <left> <right>` | Subtract the second number from the first |
 | `mul <left> <right>` | Multiply two numbers |
 | `div <left> <right>` | Divide the first number by the second |
-| `constant <name>` | Print a named constant such as `pi`, `e`, or `tau` |
 | `convert-length <value> <from> <to>` | Convert length values between supported units |
 
 ## Canonical Fixture Paths
