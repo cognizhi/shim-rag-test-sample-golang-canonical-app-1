@@ -1,0 +1,2 @@
+GET http://localhost:8080/calculate?op=add&left=7&right=5
+Accept: application/json
