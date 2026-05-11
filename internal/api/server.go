@@ -10,6 +10,7 @@ import (
 	"github.com/cognizhi/ragtest/canonical-calculator/internal/calculator"
 )
 
+
 type calculateResponse struct {
 	Operation string  `json:"operation"`
 	Left      float64 `json:"left"`
