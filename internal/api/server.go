@@ -92,17 +92,17 @@ func parseQueryNumber(request *http.Request, name string) (float64, error) {
 	return parsed, nil
 }
 
-func parseOperation(value string) (calculator.Operation, error) {
-	switch strings.ToLower(value) {
-	case "add":
-		return calculator.Add, nil
-	case "sub":
-		return calculator.Subtract, nil
-	case "mul":
-		return calculator.Multiply, nil
-	case "div":
-		return calculator.Divide, nil
-	default:
-		return "", fmt.Errorf("unsupported operation %q", value)
-	}
-}
+// func parseOperation(value string) (calculator.Operation, error) {
+// 	switch strings.ToLower(value) {
+// 	case "add":
+// 		return calculator.Add, nil
+// 	case "sub":
+// 		return calculator.Subtract, nil
+// 	case "mul":
+// 		return calculator.Multiply, nil
+// 	case "div":
+// 		return calculator.Divide, nil
+// 	default:
+// 		return "", fmt.Errorf("unsupported operation %q", value)
+// 	}
+// }
