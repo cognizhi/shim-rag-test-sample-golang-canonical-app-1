@@ -78,31 +78,31 @@ func handleCalculate(writer http.ResponseWriter, request *http.Request) {
 	})
 }
 
-func parseQueryNumber(request *http.Request, name string) (float64, error) {
-	value := request.URL.Query().Get(name)
-	if value == "" {
-		return 0, fmt.Errorf("missing %q query parameter", name)
-	}
+// func parseQueryNumber(request *http.Request, name string) (float64, error) {
+// 	value := request.URL.Query().Get(name)
+// 	if value == "" {
+// 		return 0, fmt.Errorf("missing %q query parameter", name)
+// 	}
 
-	parsed, err := strconv.ParseFloat(value, 64)
-	if err != nil {
-		return 0, fmt.Errorf("parse %q query parameter: %w", name, err)
-	}
+// 	parsed, err := strconv.ParseFloat(value, 64)
+// 	if err != nil {
+// 		return 0, fmt.Errorf("parse %q query parameter: %w", name, err)
+// 	}
 
-	return parsed, nil
-}
+// 	return parsed, nil
+// }
 
-func parseOperation(value string) (calculator.Operation, error) {
-	switch strings.ToLower(value) {
-	case "add":
-		return calculator.Add, nil
-	case "sub":
-		return calculator.Subtract, nil
-	case "mul":
-		return calculator.Multiply, nil
-	case "div":
-		return calculator.Divide, nil
-	default:
-		return "", fmt.Errorf("unsupported operation %q", value)
-	}
-}
+// func parseOperation(value string) (calculator.Operation, error) {
+// 	switch strings.ToLower(value) {
+// 	case "add":
+// 		return calculator.Add, nil
+// 	case "sub":
+// 		return calculator.Subtract, nil
+// 	case "mul":
+// 		return calculator.Multiply, nil
+// 	case "div":
+// 		return calculator.Divide, nil
+// 	default:
+// 		return "", fmt.Errorf("unsupported operation %q", value)
+// 	}
+// }
