@@ -18,6 +18,7 @@ type calculateResponse struct {
 	Result    float64 `json:"result"`
 }
 
+
 func NewHandler() http.Handler {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/healthz", handleHealth)
